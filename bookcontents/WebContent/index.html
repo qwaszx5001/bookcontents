@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.tableClass {
+	border : 1px solid black;
+	border-collapse: collapse;
+	width: 500px;
+	height: 200px;
+	}
+	.trClass {
+		border : 1px solid black;
+		height: 50px;
+	}
+	.tdClass {
+		border : 1px solid black; 
+		text-align: center;
+		background-color:#333333;
+		color: white;
+		width: 150px;
+	}
+		.tdClass2 {
+		border : 1px solid black; 
+		text-align: center;
+		
+	}
+</style>
+
+<!-- .tableClass 클래스 이름주기 .을 붙여라, border 프로퍼티, 1px solid black 밸류값 -->
+
+</head>
+<body>
+ <table class="tableClass"> <!-- 원래 소스를 tableClass에 넣음 =>> style="border : 1px solid black; border-collapse: collapse; width: 500px; height: 200px;" -->
+  
+  <tr class="trClass"> <!-- style="border : 1px solid black;height: 50px;" -->
+  
+   <td class="tdClass">필 드</td> <!-- style="border : 1px solid black text-align: center; background-color: #333333;color: white; width: 150px;" -->
+   <td class="tdClass">입력값</td>
+  
+  </tr>
+  
+  <tr class="trClass">
+  
+   <td class="trClass2">이름</td> <!-- style="border : 1px solid black; text-align: center;" -->
+   <td class="trClass"> 
+    <input type="text" style="width: 350px"> 
+   </td>
+   
+  </tr>
+  
+  <tr class="trClass">
+  
+   <td class="trClass">나이</td>
+   <td class="trClass"> 
+    <input type="text" style="width: 350px"> 
+   </td>
+   
+  </tr>
+  
+ </table>
+ 
+</body>
+</html>
