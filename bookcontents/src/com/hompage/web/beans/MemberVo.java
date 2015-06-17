@@ -1,17 +1,24 @@
 package com.hompage.web.beans;
 
 public class MemberVo {
-	 private String id;
-	 private String pass;
-	 private String name;
-	 private String email;
-	 private String sent;
-	 private int ph;
-	 private String gender;
-	 private String birth;
-	 private String address;
+	 private String id;			//아이디
+	 private String pass;		//비밀번호
+	 private String name;		//이름	
+	 private String email;		//이메일
+	 private String sent;		//메일수신여부
+	 private int ph;			//연락처
+	 private String gender;		//성별
+	 private String birth;		//생일
+	 private String address;	//주소
+	 private boolean admin;		//운영자 여부
 	 
 	 
+	public boolean isAdmin() {
+		return admin;
+	}
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
 	public String getId() {
 		return id;
 	}
