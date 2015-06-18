@@ -1,4 +1,4 @@
-package com.hompage.web.beans;
+package com.hompage.member.beans;
 
 public class MemberVo {
 	 private String id;			//아이디

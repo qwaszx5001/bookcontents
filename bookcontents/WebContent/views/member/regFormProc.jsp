@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%request.setCharacterEncoding("UTF-8"); %>
-<jsp:useBean id="vo" class="com.hompage.web.beans.MemberVo"/>
+<jsp:useBean id="vo" class="com.hompage.member.beans.MemberVo"/>
 <jsp:setProperty property="*" name="vo"/>
 <!doctype html>
 <html lang="en">
