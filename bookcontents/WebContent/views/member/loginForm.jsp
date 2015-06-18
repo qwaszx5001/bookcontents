@@ -59,7 +59,7 @@
 		<jsp:include page="memberMenu.jsp" />
 		<section class="rightContent">
 
-			<form action="loginProc.jsp" method="post" name="form">
+			<form action="<%=request.getContextPath()%>loginProc.soso" method="post" name="form">
 				<table width="1400" height="650">
 					<tr>
 						<td width="100%" height="63px"><b>동네북에 오신걸 환영합니다.</b></td>
