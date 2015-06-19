@@ -7,24 +7,44 @@
 <title>회원가입 창</title>
 
 <script type="text/javascript">
-	var right = 0;
-	x
-
-	function passchk() {
-		var pass = document.form.pass.value;
-		var pass2 = document.form.pass2.value;
-		if (pass2.length == 0 || pass2 == null) {
-			document.form.chk.value = "";
-		} else if (pass != pass2) {
-			document.form.chk.value = "비밀번호가 다릅니다.";
-		} else {
-			document.form.chk.value = "비밀번호가 동일합니다.";
+	
+	
+	var regChk = function regChk(){
+		 var id = document.form.id.value;
+		 var regx = /^[a-zA-Z0-9]*$/;
+		 if(id.length==0 || id==null){
+		  alert("아이디를 입력하십시오");
+		  return false;
+		 }
+		 if (!regx.test(id)){
+		  alert("아이디는 영어, 숫자만 입력가능합니다.");
+		  document.form.id.focus();
+		  return false;
+		 }
+		 document.form.submit();
 		}
-		return;
-	}
+	
+	
+
+	function passchk(){
+		 var pass = document.form.pass.value;
+		 var pass2 = document.form.pass2.value;
+		 if (pass2.length == 0 || pass2 == null) {
+		  document.form.chk.value = "비밀번호를 입력하세요";
+		  right = 0;
+		 } else if (pass != pass2) {
+		  document.form.chk.value = "비밀번호가 다릅니다.";
+		  right = 0;
+		 } else {   
+		  document.form.chk.value = "비밀번호가 동일합니다.";
+		  right = 1;
+		 }
+		 return;
+		}
+
 
 	function regCancel() {
-		location.href = "../member/loginForm.jsp";
+		location.href = "<%=request.getContextPath()%>/views/member/loginForm.jsp";
 	}
 </script>
 
@@ -42,7 +62,7 @@
 		<jsp:include page="memberMenu.jsp" />
 		<section class="rightContent">
 
-			<form action="regFormProc.jsp" name="form" method="post">
+			<form action="<%=request.getContextPath()%>/views/member/regFormProc.jsp" name="form" method="post">
 				<table width="1400" height="650">
 					<tr>
 						<td width="100%" height="63px"><b>회원가입</b></td>

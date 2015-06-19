@@ -7,10 +7,12 @@
 <title>loginForm</title>
 
 <script type="text/javascript">
+
 	function loginchk() {
 		var regx = /^[a-zA-Z0-9]*$/;
 		var id = document.form.id.value;
 		var pass = document.form.pass.value;
+		
 		if (id.length == 0 || id == null) {
 			alert("아이디를 입력하시오");
 			document.form.id.focus();
@@ -39,11 +41,11 @@
 	}
 
 	function searchIdForm() {
-		location.href = "../member/searchIdForm.jsp";
+		 location.href = "../member/searchIdForm.jsp";
 	}
 
 	function searchPassForm() {
-		location.href = "../member/searchPassForm.jsp";
+		 location.href = "../member/searchPassForm.jsp";
 	}
 </script>
 
@@ -59,7 +61,7 @@
 		<jsp:include page="memberMenu.jsp" />
 		<section class="rightContent">
 
-			<form action="<%=request.getContextPath()%>loginProc.soso" method="post" name="form">
+			<form action="<%=request.getContextPath()%>/views/member/loginProc.jsp" method="post" name="form">
 				<table width="1400" height="650">
 					<tr>
 						<td width="100%" height="63px"><b>동네북에 오신걸 환영합니다.</b></td>
@@ -85,7 +87,7 @@
 						<hr>
 						<br> <input type="button" value="회원가입" onclick="Agree()">
 						<input type="button" value="아이디 찾기" onclick="searchIdForm()">
-						<input type="button" value="비밀번호 찾기" onclick="searchIdForm()">
+						<input type="button" value="비밀번호 찾기" onclick="searchPassForm()">
 					</tr>
 				</table>
 			</form>
